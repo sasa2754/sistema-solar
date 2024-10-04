@@ -23,16 +23,16 @@ scene.add(sunMesh);
 
 // Criando Mercurio
 const mercuryGeometry = new THREE.SphereGeometry(5, 32, 16);
-const mercuryMaterial = new THREE.MeshLambertMaterial({ color: 0x7b0000 });
+const mercuryMaterial = new THREE.MeshLambertMaterial({ color: 0x5e3535 });
 const mercuryMesh = new THREE.Mesh(mercuryGeometry, mercuryMaterial);
-mercuryMesh.position.x = -35;  // Posicionando Mercurio
+mercuryMesh.position.x = 35;  // Posicionando Mercurio
 scene.add(mercuryMesh);
 
 // Criando a Terra
 const earthGeometry = new THREE.SphereGeometry(10, 32, 16);
 const earthMaterial = new THREE.MeshLambertMaterial({ color: 0x027017 });
 const earthMesh = new THREE.Mesh(earthGeometry, earthMaterial);
-earthMesh.position.x = 40;  // Posicionando a Terra
+earthMesh.position.x = 55;  // Posicionando a Terra
 scene.add(earthMesh);
 
 // Criando a Lua
@@ -40,15 +40,23 @@ const moonGeometry = new THREE.SphereGeometry(1, 32, 16);
 const moonMaterial = new THREE.MeshLambertMaterial({ color: 0xD3D3D3 });
 const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
 moonMesh.position.y = 12;
-moonMesh.position.x = 35;  // Posicionando a lua
+moonMesh.position.x = 50;  // Posicionando a lua
 scene.add(moonMesh);
+
+// Criando Marte
+const marsGeometry = new THREE.SphereGeometry(10, 32, 16);
+const marsMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const marsMesh = new THREE.Mesh(marsGeometry, marsMaterial);
+marsMesh.position.x = 80;  // Posicionando Marte
+scene.add(marsMesh);
 
 // Adicionando luz à cena
 const light = new THREE.PointLight(0xffffff, 1, 100);
-light.position.set(10, 10, 45);
+light.position.set(20, 20, 45);
 scene.add(light);
 
+
 // Posicionando a câmera
-camera.position.z = 85;
+camera.position.z = 150;
 
 animate();
